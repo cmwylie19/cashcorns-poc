@@ -1,0 +1,20 @@
+[req]
+distinguished_name = req_distinguished_name
+x509_extensions = v3_req
+prompt = no
+
+[req_distinguished_name]
+C = US
+ST = FL
+L = Miami
+O = DefenseUnicorns
+OU = EngineeringFinance
+CN = ec2-18-117-82-51.us-east-2.compute.amazonaws.com
+
+[v3_req]
+keyUsage = keyEncipherment, dataEncipherment
+extendedKeyUsage = serverAuth
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = ec2-18-117-82-51.us-east-2.compute.amazonaws.com
