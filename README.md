@@ -1,5 +1,5 @@
 # CashCorns POC
 
 _Projects_
-* [Backend]()
-* [Frontend]()
+* [Backend](cashcorns-backend/README.md)
+* [Frontend](cashcorns-frontend/README.md)
