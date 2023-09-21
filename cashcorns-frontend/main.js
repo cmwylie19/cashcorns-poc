@@ -24,7 +24,7 @@
   }
 
   const sendTotalsToBackend = tacoCountData => {
-    // return fetch(`url_to_backend_api_to_send_taco_counts`, {
+    // return fetch(`du_url_to_backend_api_to_send_taco_counts`, {
     //   method: 'POST',
     //   body: JSON.stringify(tacoCountData),
     //   headers: {
