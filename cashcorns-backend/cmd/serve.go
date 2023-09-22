@@ -29,7 +29,6 @@ Flags:
 --port, -p  Port to run the server on. Default is 443.
 --payrun-file-location, -f  Location of the payrun file.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		// fmt.Println("serve called")
 		server := server.NewServer(Port, PayRunFileLocation)
 		server.Serve()
 	},
