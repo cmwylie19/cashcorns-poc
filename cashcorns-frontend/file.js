@@ -34,7 +34,9 @@ function CalculateDaysSinceMostRecentDate(dateArray) {
     days = CalculateDaysSinceMostRecentDate(approvalDates)
     url = `https://www.heytaco.chat/api/v1/json/leaderboard/T01G7FPRP8V?days=${days}`
     fetch(url).then(res => res.json()).then(data => {
-        console.log(data, undefined, 2)
+        // change sum to dollar amount
+        const TACO_VALUE = 5;
+        data.leaderboard.map((user) => user.sum = user.sum * TACO_VALUE)
         return data;
     }).then(data => {
 
