@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSV Creator</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        input[type="file"] {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        input[type="submit"] {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Taco Automator</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" id="file">
+        <input type="submit" value="Upload File">
+    </form>
+</body>
+</html>
