@@ -1,36 +1,121 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>CSV Creator</title>
+    <title>🦄</title>
     <style>
         body {
+            background-image: url('https://www.defenseunicorns.com/static/home-hero-bg-feff54111a83d6b7c0c38219c80b1333.jpg');
+
+            background-size: cover;
             font-family: sans-serif;
+            background-position: center;
+
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
         }
+
         h1 {
             text-align: center;
+            color: red;
+            transition: transform 1.5s ease-in-out;
         }
+
+        h1:hover {
+            transform: scale(1.2) rotate(360deg);
+        }
+
         form {
             width: 50%;
             margin: 0 auto;
             text-align: center;
         }
+
         input[type="file"] {
             width: 100%;
             margin: 0 auto;
             text-align: center;
         }
+
         input[type="submit"] {
             width: 100%;
             margin: 0 auto;
             text-align: center;
         }
+
+        /* Style the file input container */
+        .upload-container {
+            position: relative;
+            overflow: hidden;
+            /* display: inline-block; */
+            margin: 0 auto;
+            color: #fff;
+            text-align: center;
+            /* padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
+            cursor: pointer;
+        }
+        /* .upload-container:hover {
+            background-color: #3498db;
+            color: #000;
+        } */
+
+        .upload-container input[type="file"] {
+            position: absolute;
+            font-size: 100px;
+            opacity: 0;
+            right: 0;
+            top: 0;
+            cursor: pointer;
+        }
+
+        .upload-container input[type="submit"] {
+            display: block;
+            margin: 10px auto;
+            padding: 5px 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+        .upload-container input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
+
 <body>
     <h1>Taco Automator</h1>
     <form action="/upload" method="post" enctype="multipart/form-data">
-        <input type="file" name="file" id="file">
-        <input type="submit" value="Upload File">
+
+        <div class="upload-container">
+            <label for="file">Choose a file:</label>
+            <input type="file" name="file" id="file">
+
+
+            <hr />
+        </div>
+        <div class="upload-container">
+            <input type="submit" value="Upload File">
+        </div>
+
     </form>
 </body>
+
 </html>
