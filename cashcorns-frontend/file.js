@@ -1,22 +1,22 @@
 function CalculateDaysSinceMostRecentDate(dateArray) {
-    // Get today's date
+
     const today = new Date();
 
-    // Filter the dates in the array to keep only past dates
+    // only need past dates
     const pastDates = dateArray.filter(dateString => {
         const date = new Date(dateString);
         return date < today;
     });
 
-    // If no past dates are found, return null or an appropriate value
+
     if (pastDates.length === 0) {
         return null;
     }
 
-    // Find the most recent past date by sorting the pastDates array
+    // sort
     pastDates.sort((a, b) => new Date(b) - new Date(a));
 
-    // Calculate the number of days since the most recent past date
+   
     const mostRecentDate = new Date(pastDates[0]);
     const timeDifference = today - mostRecentDate;
     const daysSinceMostRecent = Math.floor(timeDifference / (1000 * 60 * 60 * 24));

@@ -1,7 +1,7 @@
 package server
 
-var startCommas = ",,,,,,,,,,,,,,"
-var endCommas = ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,"
+var startCommas = ",,,,,,,,,,,,,"
+var endCommas = ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"
 var nameMap = map[string]string{
 	"austen.abro":      "18,Austin Abro" + startCommas,
 	"james":            "95,James Allen" + startCommas,
