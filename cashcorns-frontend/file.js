@@ -36,7 +36,11 @@ function CalculateDaysSinceMostRecentDate(dateArray) {
     fetch(url).then(res => res.json()).then(data => {
         // change sum to dollar amount
         const TACO_VALUE = 5;
-        data.leaderboard.map((user) => user.sum = user.sum * TACO_VALUE)
+ 
+        data.leaderboard.map((user) => {
+            user.sum = `${user.sum * TACO_VALUE}`
+        })
+        console.log("TACOO  "+JSON.stringify(data,undefined,2))
         return data;
     }).then(data => {
 
