@@ -37,6 +37,6 @@ Flags:
 
 func init() {
 	rootCmd.AddCommand(serveCmd)
-	serveCmd.PersistentFlags().StringVarP(&Port, "port", "p", "443", "Port to run the server on. Default is 8888.")
+	serveCmd.PersistentFlags().StringVarP(&Port, "port", "p", "8888", "Port to run the server on. Default is 8888.")
 	serveCmd.PersistentFlags().StringVarP(&PayRunFileLocation, "payrun-file-location", "f", "/etc/config/payrun.json", "Location of the payrun file.")
 }

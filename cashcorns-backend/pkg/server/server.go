@@ -31,14 +31,14 @@ func NewServer(port, fileLocation string) *Server {
 func (s *Server) Serve() {
 	fmt.Println("serve called")
 
-	http.HandleFunc("/form", formHandler)
+	http.HandleFunc("/", formHandler)
 	http.HandleFunc("/upload", uploadHandler)
 	http.HandleFunc("/download", downloadHandler)
 
 	// Start the server on port 8080
 	fmt.Printf("Server is listening on port %s...\n", s.Port)
-	err := http.ListenAndServeTLS(fmt.Sprintf(":%s", s.Port), "tls.crt", "tls.key", nil)
-	//err := http.ListenAndServe(fmt.Sprintf(":%s", s.Port), nil)
+	// err := http.ListenAndServeTLS(fmt.Sprintf(":%s", s.Port), "tls.crt", "tls.key", nil)
+	err := http.ListenAndServe(fmt.Sprintf(":%s", s.Port), nil)
 	if err != nil {
 		panic(err)
 	}
